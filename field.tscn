@@ -1,0 +1,225 @@
+[gd_scene load_steps=28 format=3 uid="uid://dh1g6tmdrwcsf"]
+
+[ext_resource type="Texture2D" uid="uid://b287w5ofooaxh" path="res://Screenshot 2025-09-19 182823.png" id="1_0cutk"]
+[ext_resource type="Script" uid="uid://c2pv76ylfw8g1" path="res://main.gd" id="1_1avfc"]
+[ext_resource type="Texture2D" uid="uid://c00uqrrk7oor0" path="res://supply.png" id="2_b2s6v"]
+[ext_resource type="Texture2D" uid="uid://dx24y6k4ahpsg" path="res://rent.png" id="2_c2tsg"]
+[ext_resource type="Texture2D" uid="uid://dgqd3ehgb5gof" path="res://result.png" id="2_srqns"]
+[ext_resource type="Texture2D" uid="uid://cvk8xawxtcfai" path="res://supply-click.png" id="3_1avfc"]
+[ext_resource type="Script" uid="uid://bnm3o6rtgiutp" path="res://Buttons.gd" id="3_43ofx"]
+[ext_resource type="Texture2D" uid="uid://dg8tjovjn62ae" path="res://rent-click.png" id="3_pwbbp"]
+[ext_resource type="Texture2D" uid="uid://bm11dscpwspp3" path="res://result-click.png" id="3_vm625"]
+[ext_resource type="Texture2D" uid="uid://be7qiujlauas" path="res://supply-hover.png" id="4_3xe0r"]
+[ext_resource type="Texture2D" uid="uid://dus38d0he4sfk" path="res://result-hover.png" id="4_gj8yl"]
+[ext_resource type="Texture2D" uid="uid://dgsdnungfchiq" path="res://rent-hover.png" id="4_qvwwi"]
+[ext_resource type="Texture2D" uid="uid://dpybu76f82at5" path="res://recipe.png" id="5_ro4ak"]
+[ext_resource type="Texture2D" uid="uid://dioxivr37rdgk" path="res://recipe-click.png" id="6_43ofx"]
+[ext_resource type="Texture2D" uid="uid://doj0jsi8klnu4" path="res://recipe-hover.png" id="7_4hkwd"]
+[ext_resource type="Script" uid="uid://bs0cgbm84306u" path="res://details.gd" id="15_3xe0r"]
+[ext_resource type="Texture2D" uid="uid://bx5x6fhb1j2dc" path="res://NavBar.png" id="16_ro4ak"]
+[ext_resource type="Texture2D" uid="uid://do0f47hue0tab" path="res://railway.png" id="18_4hkwd"]
+[ext_resource type="Script" uid="uid://h1pgsagasg6k" path="res://animation.gd" id="18_njejc"]
+[ext_resource type="Texture2D" uid="uid://ev0vd3gcccl6" path="res://charback-side.png" id="19_0y4xi"]
+[ext_resource type="Texture2D" uid="uid://dkws4n6xgpqt4" path="res://3d stall.png" id="21_mvakd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1avfc"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ro4ak"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_43ofx"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_4hkwd"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_0y4xi"]
+font_size = 24
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njejc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_0y4xi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1avfc")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960.3251, 600.25)
+scale = Vector2(0.75015634, 0.75015634)
+texture = ExtResource("1_0cutk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1200.0
+color = Color(0.33278197, 0.65892243, 0.3374043, 1)
+script = ExtResource("3_43ofx")
+
+[node name="Supplies" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 160.0
+offset_right = 887.0
+offset_bottom = 416.0
+scale = Vector2(0.5486336, 0.5486336)
+texture_normal = ExtResource("2_b2s6v")
+texture_pressed = ExtResource("3_1avfc")
+texture_hover = ExtResource("4_3xe0r")
+
+[node name="Recipe" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 448.00003
+offset_top = 160.0
+offset_right = 661.0
+offset_bottom = 416.0
+scale = Vector2(0.55242944, 0.55242944)
+texture_normal = ExtResource("5_ro4ak")
+texture_pressed = ExtResource("6_43ofx")
+texture_hover = ExtResource("7_4hkwd")
+
+[node name="Rent" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 160.0
+offset_right = 485.0
+offset_bottom = 416.0
+scale = Vector2(0.5655288, 0.5598988)
+texture_normal = ExtResource("2_c2tsg")
+texture_pressed = ExtResource("3_pwbbp")
+texture_hover = ExtResource("4_qvwwi")
+
+[node name="Results" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 160.0
+offset_right = 305.0
+offset_bottom = 416.0
+scale = Vector2(0.55794704, 0.55794704)
+texture_normal = ExtResource("2_srqns")
+texture_pressed = ExtResource("3_vm625")
+texture_hover = ExtResource("4_gj8yl")
+
+[node name="DetailsView" type="SubViewportContainer" parent="."]
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 960.0
+offset_bottom = 1088.0
+
+[node name="Details" type="SubViewport" parent="DetailsView"]
+handle_input_locally = false
+size = Vector2i(896, 640)
+render_target_update_mode = 4
+script = ExtResource("15_3xe0r")
+
+[node name="DetailsBox" type="ColorRect" parent="DetailsView/Details"]
+offset_right = 896.0
+offset_bottom = 640.0
+color = Color(0.5803922, 0.83137256, 0.5647059, 1)
+
+[node name="detailsScene" type="Node2D" parent="DetailsView/Details/DetailsBox"]
+
+[node name="Weather" type="ColorRect" parent="."]
+offset_left = 1088.0
+offset_top = 128.0
+offset_right = 1792.0
+offset_bottom = 320.0
+color = Color(0.5803922, 0.83137256, 0.5647059, 1)
+
+[node name="Label" type="Label" parent="Weather"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 148.0
+offset_bottom = 72.0
+text = "Weather"
+label_settings = SubResource("LabelSettings_1avfc")
+
+[node name="NavBar" type="Sprite2D" parent="."]
+position = Vector2(960, 56)
+texture = ExtResource("16_ro4ak")
+
+[node name="tea_bag" type="Label" parent="NavBar"]
+offset_left = -744.0
+offset_top = -24.0
+offset_right = -680.0
+offset_bottom = 16.0
+text = "num"
+label_settings = SubResource("LabelSettings_ro4ak")
+
+[node name="milk" type="Label" parent="NavBar"]
+offset_left = -80.0
+offset_top = -24.0
+offset_right = -16.0
+offset_bottom = 16.0
+text = "num"
+label_settings = SubResource("LabelSettings_43ofx")
+
+[node name="sugar" type="Label" parent="NavBar"]
+offset_left = -320.0
+offset_top = -24.0
+offset_right = -256.0
+offset_bottom = 16.0
+text = "num"
+label_settings = SubResource("LabelSettings_4hkwd")
+
+[node name="cup" type="Label" parent="NavBar"]
+offset_left = -560.0
+offset_top = -24.0
+offset_right = -496.0
+offset_bottom = 16.0
+text = "num"
+label_settings = SubResource("LabelSettings_0y4xi")
+
+[node name="account_balance" type="Label" parent="NavBar"]
+offset_left = 576.0
+offset_top = -40.0
+offset_right = 768.0
+text = "num"
+label_settings = SubResource("LabelSettings_0y4xi")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 1096.0
+offset_top = 384.0
+offset_right = 1792.0
+offset_bottom = 1088.0
+script = ExtResource("18_njejc")
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(694, 694)
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(348, 348)
+scale = Vector2(0.6796875, 0.6796875)
+texture = ExtResource("18_4hkwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/Sprite2D"]
+position = Vector2(-535.5403, 335.44827)
+scale = Vector2(0.23779058, 0.23779058)
+sprite_frames = SubResource("SpriteFrames_njejc")
+
+[node name="3dStall" type="Sprite2D" parent="SubViewportContainer/SubViewport/Sprite2D"]
+position = Vector2(88.27585, -76.50577)
+scale = Vector2(0.09820337, 0.09820339)
+texture = ExtResource("21_mvakd")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1304.0
+offset_top = 1104.0
+offset_right = 1584.0
+offset_bottom = 1176.0
+text = "PLAY"
+
+[connection signal="pressed" from="ColorRect/Supplies" to="ColorRect" method="SuppliesPressed"]
+[connection signal="pressed" from="ColorRect/Recipe" to="ColorRect" method="RecipePressed"]
+[connection signal="pressed" from="ColorRect/Rent" to="ColorRect" method="RentPressed"]
+[connection signal="pressed" from="ColorRect/Results" to="ColorRect" method="ResultsPressed"]
+[connection signal="pressed" from="Button" to="SubViewportContainer" method="_on_button_pressed"]

@@ -1,0 +1,333 @@
+[gd_scene load_steps=15 format=3 uid="uid://caq3pp2offlop"]
+
+[ext_resource type="Script" uid="uid://bw3r3udwkd4f7" path="res://supplies.gd" id="1_2khme"]
+[ext_resource type="Texture2D" uid="uid://cx7yk7avrlrqw" path="res://milk.png" id="1_66axj"]
+[ext_resource type="Texture2D" uid="uid://b65iu4g78wbbp" path="res://cup.png" id="2_2khme"]
+[ext_resource type="Texture2D" uid="uid://dhdmpd3fmoohy" path="res://cup2.png" id="3_cyjw0"]
+[ext_resource type="Texture2D" uid="uid://cifuj67nvwm66" path="res://sugar.png" id="3_fsvwj"]
+[ext_resource type="Texture2D" uid="uid://b6wryg03sfmwv" path="res://cup3.png" id="4_ayjfu"]
+[ext_resource type="Texture2D" uid="uid://dlg2l28d6e6o8" path="res://teabag.png" id="4_cyjw0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66axj"]
+bg_color = Color(0.23921569, 0.39607844, 0.23137255, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2khme"]
+bg_color = Color(0.23921569, 0.39607844, 0.23137255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsvwj"]
+bg_color = Color(0.23921569, 0.39607844, 0.23137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cyjw0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ayjfu"]
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ayjfu"]
+font_names = PackedStringArray("Serif")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wnv3k"]
+font = SubResource("SystemFont_ayjfu")
+font_size = 32
+font_color = Color(0.05977647, 0.38387957, 0, 1)
+
+[node name="Supplies" type="Node2D"]
+script = ExtResource("1_2khme")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 896.0
+offset_bottom = 640.0
+color = Color(0.5803922, 0.83137256, 0.5647059, 1)
+
+[node name="UI" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 296.0
+offset_right = 656.0
+offset_bottom = 552.0
+color = Color(0.23868841, 0.39775074, 0.23032916, 1)
+
+[node name="Box1" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 528.0
+offset_bottom = 72.0
+color = Color(0.4610275, 0.70645344, 0.44706255, 1)
+
+[node name="Minus" type="Button" parent="ColorRect/UI/Box1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 56.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf" type="Button" parent="ColorRect/UI/Box1"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 24.0
+offset_right = 496.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf2" type="Button" parent="ColorRect/UI/Box1"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 16.0
+rotation = 1.5707964
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/UI/Box1"]
+position = Vector2(104, 30)
+scale = Vector2(0.38717535, 0.38717535)
+texture = ExtResource("2_2khme")
+
+[node name="Box2" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 96.0
+offset_right = 528.0
+offset_bottom = 152.0
+color = Color(0.4610275, 0.70645344, 0.44706255, 1)
+
+[node name="Minus" type="Button" parent="ColorRect/UI/Box2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 56.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf" type="Button" parent="ColorRect/UI/Box2"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 16.0
+rotation = 1.5707964
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf2" type="Button" parent="ColorRect/UI/Box2"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 24.0
+offset_right = 496.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/UI/Box2"]
+position = Vector2(105, 27.999996)
+scale = Vector2(0.3961039, 0.3961039)
+texture = ExtResource("3_cyjw0")
+
+[node name="Box3" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 184.0
+offset_right = 528.0
+offset_bottom = 240.0
+color = Color(0.4610275, 0.70645344, 0.44706255, 1)
+
+[node name="Minus" type="Button" parent="ColorRect/UI/Box3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 56.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf" type="Button" parent="ColorRect/UI/Box3"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 24.0
+offset_right = 496.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="PlusHalf2" type="Button" parent="ColorRect/UI/Box3"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 16.0
+rotation = 1.5707964
+theme_override_styles/normal = SubResource("StyleBoxFlat_66axj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2khme")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fsvwj")
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/UI/Box3"]
+position = Vector2(101.99999, 28.999992)
+scale = Vector2(0.43151373, 0.33105168)
+texture = ExtResource("4_ayjfu")
+
+[node name="Option1" type="Label" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 190.0
+offset_bottom = 46.0
+text = "1st"
+
+[node name="Option2" type="Label" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 103.0
+offset_right = 190.0
+offset_bottom = 126.0
+text = "2nd"
+
+[node name="Option3" type="Label" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 193.0
+offset_right = 191.0
+offset_bottom = 216.0
+text = "3rd"
+label_settings = SubResource("LabelSettings_cyjw0")
+
+[node name="Option1Count" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 24.0
+offset_right = 440.0
+offset_bottom = 64.0
+
+[node name="Label" type="Label" parent="ColorRect/UI/Option1Count"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "0"
+label_settings = SubResource("LabelSettings_ayjfu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option2Count" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 104.0
+offset_right = 440.0
+offset_bottom = 144.0
+
+[node name="Label" type="Label" parent="ColorRect/UI/Option2Count"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "0"
+label_settings = SubResource("LabelSettings_ayjfu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option3Count" type="ColorRect" parent="ColorRect/UI"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 192.0
+offset_right = 440.0
+offset_bottom = 232.0
+
+[node name="Label" type="Label" parent="ColorRect/UI/Option3Count"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "0"
+label_settings = SubResource("LabelSettings_ayjfu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 129.0
+offset_bottom = 87.0
+text = "Supplies"
+label_settings = SubResource("LabelSettings_wnv3k")
+
+[node name="Buy" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 563.0
+offset_right = 856.0
+offset_bottom = 614.0
+text = "BUY"
+
+[node name="Milk" type="Sprite2D" parent="."]
+position = Vector2(200, 240)
+texture = ExtResource("1_66axj")
+
+[node name="Button" type="Button" parent="Milk"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -48.0
+offset_top = -40.0
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="Cup" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+texture = ExtResource("2_2khme")
+
+[node name="Button" type="Button" parent="Cup"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = 48.0
+
+[node name="Sugar" type="Sprite2D" parent="."]
+position = Vector2(448, 240)
+texture = ExtResource("3_fsvwj")
+
+[node name="Button" type="Button" parent="Sugar"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="Teabag" type="Sprite2D" parent="."]
+position = Vector2(592, 240)
+texture = ExtResource("4_cyjw0")
+
+[node name="Button" type="Button" parent="Teabag"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = 48.0
+
+[connection signal="pressed" from="ColorRect/UI/Box1/Minus" to="." method="minus1"]
+[connection signal="pressed" from="ColorRect/UI/Box1/PlusHalf" to="." method="plus1"]
+[connection signal="pressed" from="ColorRect/UI/Box1/PlusHalf2" to="." method="plus1"]
+[connection signal="pressed" from="ColorRect/UI/Box2/Minus" to="." method="minus2"]
+[connection signal="pressed" from="ColorRect/UI/Box2/PlusHalf" to="." method="plus2"]
+[connection signal="pressed" from="ColorRect/UI/Box2/PlusHalf2" to="." method="plus2"]
+[connection signal="pressed" from="ColorRect/UI/Box3/Minus" to="." method="minus3"]
+[connection signal="pressed" from="ColorRect/UI/Box3/PlusHalf" to="." method="plus3"]
+[connection signal="pressed" from="ColorRect/UI/Box3/PlusHalf2" to="." method="plus3"]
+[connection signal="pressed" from="ColorRect/Buy" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="Milk/Button" to="." method="milk"]
+[connection signal="pressed" from="Cup/Button" to="." method="cup"]
+[connection signal="pressed" from="Sugar/Button" to="." method="sugar"]
+[connection signal="pressed" from="Teabag/Button" to="." method="tea"]
