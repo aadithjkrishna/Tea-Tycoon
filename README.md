@@ -12,10 +12,11 @@
 - **Member 3:** Akshith K - TKMCE Kollam
 
 ## Game Description
-The Game is a tea business simulator, where we primarily focused on building a tea business from 
+The Game is a tea business simulator, where we primarily focused on building a tea business from a small investment.Here user  make strategies and risks for making the idea a success.
 
 ## The Concept
-[Explain the core idea of the game—story, gameplay mechanics, or main objective.]
+The core idea is to plan business strategy before every day.
+like: the upcoming events,whether,season, strikes etc are introduced to the user before the starting of the day, this will be randomly introduced among the cases that we actually hard code and can be extended by including more cases, which makes the user experience more thrilling. Also there will be a 
 
 ## Technical Details
 
@@ -52,7 +53,7 @@ The Game is a tea business simulator, where we primarily focused on building a t
 ### Game Demo
 
 #### Gameplay Video
-[Add link to gameplay video]  
+(https://youtu.be/HeJO0z4DAp8)
 
 ## Game Download / Deployment
 - **Playable Version / Download:** [Link to executable or archive]
