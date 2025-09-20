@@ -7,12 +7,12 @@
 **Team Name:** [Your Team Name]
 
 ### Team Members
-- **Team Lead:** [Name] - [College]
-- **Member 2:** [Name] - [College]
-- **Member 3:** [Name] - [College]
+- **Team Lead:** Danish Zakariya V V - TKMCE Kollam
+- **Member 2:** Aadith J Krishna N - TKMCE Kollam
+- **Member 3:** Akshith K - TKMCE Kollam
 
 ## Game Description
-[2-3 lines about what your game is, the genre, and what makes it fun or unique.]
+The Game is a tea business simulator, where we primarily focused on building a tea business from 
 
 ## The Concept
 [Explain the core idea of the game—story, gameplay mechanics, or main objective.]
